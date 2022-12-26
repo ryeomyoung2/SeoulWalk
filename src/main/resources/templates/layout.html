@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    <title>Seoul Walk</title>
+</head>
+
+<body>
+
+<div class="d-flex justify-content-between">
+	<div class="m-2 p-1">
+		<h2>Seoul Walk</h2>
+	</div>
+	
+	<div class="m-2 p-1">
+		<h5>날씨 영역</h5>
+	</div>
+	
+	<div class="m-2">
+		<span>
+            <a sec:authorize="isAnonymous()" href="#">로그인</a>
+            <a sec:authorize="isAuthenticated()" href="#">로그아웃</a>
+            <a sec:authorize="isAnonymous()" href="#">회원가입</a>
+        </span>
+	</div>
+</div>
+
+<div th:replace="~{navbar :: navbarFragment}"></div>
+
+<th:block layout:fragment="content"></th:block>
+
+</body>
