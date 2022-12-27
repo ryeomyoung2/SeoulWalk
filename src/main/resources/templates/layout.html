@@ -12,16 +12,21 @@
 
 <div class="d-flex justify-content-between">
 	<div class="m-2 p-1">
-		<h2>Seoul Walk</h2>
+		<a style="color: black; font-size:35px;" href="/">Seoul Walk</a>
 	</div>
 	
 	<div class="m-2 p-1">
-		<h5>날씨 영역</h5>
+		<h4>서울</h4>
+		<p class="ctemp">현재 기온: </p>
+		<p class="lowtemp">최저 기온: </p>
+		<p class="hightemp">최고 기온: </p>
+		<h6 class="icon">
+		</h3>
 	</div>
 	
 	<div class="m-2">
 		<span>
-            <a sec:authorize="isAnonymous()" href="#">로그인</a>
+            <a sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
             <a sec:authorize="isAuthenticated()" href="#">로그아웃</a>
         </span>
 	</div>
@@ -30,5 +35,42 @@
 <div th:replace="~{navbar :: navbarFragment}"></div>
 
 <th:block layout:fragment="content"></th:block>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+	integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
+	crossorigin="anonymous"></script>
+	
+	<script>
+		 
+			$.getJSON('https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=2ba921487b84a2fa7b3137fdf4c70628&units=metric', function(result){
+			
+			$('.ctemp').append(result.main.temp+"°C");
+			$('.lowtemp').append(result.main.temp_min+"°C");
+			$('.hightemp').append(result.main.temp_max+"°C");
+			var wiconUrl = '<img src="http://openweathermap.org/img/wn/'+result.weather[0].icon+'.png" alt="'+result.
+			weather[0].description+'">'
+			$('.icon').html(wiconUrl);
+			
+			var ct = result.dt;
+			 
+			function convertTime(t){
+				var ot = new Date(t*1000); 
+				var hr = ot.getHours();
+				var m = ot.getMinutes();
+				var s = ot.getSeconds();
+				
+				return hr + ':' + m + ':' + s
+				
+			}
+			
+			
+			var currentTime=convertTime(ct)
+			$('.time').append(currentTime);
+			
+		});
+		
+		
+
+	</script>
 
 </body>
