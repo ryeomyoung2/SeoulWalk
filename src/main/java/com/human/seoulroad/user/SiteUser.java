@@ -17,8 +17,10 @@ public class SiteUser {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column
-	private String nickname;
+    @Column(unique = true)
+    private String username;
+	
+	private String password;
 	
 	@Column(unique = true)
 	private String email;

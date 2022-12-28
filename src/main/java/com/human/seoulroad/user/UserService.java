@@ -10,15 +10,16 @@ import lombok.RequiredArgsConstructor;
 public class UserService {
 	
 	private final UserRepository userRepository;
-	//private final PasswordEncoder passwordEncoder;
+	private final PasswordEncoder passwordEncoder;
 	
 	// 회원 데이터 생성 메서드
-	public SiteUser create(String nickname, String email) {
+	public SiteUser create(String username, String email, String password) {
 		SiteUser user = new SiteUser();
-		user.setNickname(nickname);
+		user.setUsername(username);
 		user.setEmail(email);
 		
-		// 
+        // 암호화
+        user.setPassword(passwordEncoder.encode(password));
 		this.userRepository.save(user);
 		return user;
 	}
