@@ -21,3 +21,123 @@ a{
 .nav-link:hover{
 	color:black;
 }
+/*임여명*/
+p{
+	font-size:15px;
+	line-height: 1px;
+}
+.lowtemp{
+	font-size:12px;
+	line-height: 1px;
+}
+.hightemp{
+	font-size:12px;
+	line-height: 1px;
+}
+ .SceneryImg {
+        text-align: center;
+}
+.layout{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.qna{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.qna > li{
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.qna > li:nth-child(n+2){ /* 아이템 구분 점선 */
+  border-top: 1px dashed #aaa;
+}
+.qna input {
+  display: none;
+}
+
+.qna label { /* 제목 - 클릭 영역 */
+  font-weight: bold;
+  color: #000;
+  margin: 20px 0 0;
+  cursor: pointer;
+}
+.qna label::before { /* 제목 앞 화살표 */
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left: 8px solid #a00;
+  margin: 2px 0 0 8px;
+  float: left;
+}
+.qna input:checked + label::before { /* 내용 펼침 상태 제목 앞 화살표 */
+  border: 8px solid transparent;
+  border-top: 8px solid #a00;
+  border-bottom: 0;
+  margin: 8px 4px 0;
+}
+
+.qna div { /* 내용 영역 - 기본 감춤 상태 */
+  display: none;
+  color: #666;
+  font-size: 0.9375em;
+  overflow: hidden;
+  padding: 10px 0 10px 30px;
+  box-sizing: border-box;
+  transition: max-height 0.4s;
+}
+.qna input:checked + label + div { /* 내용 영역 펼침 */
+  display: block;
+}
+.background {
+    width: 1205px;
+    height: 600px;
+    padding: 50px 0px 0px 20px;
+    margin-left:auto;
+	margin-right:auto;
+    background-repeat: no-repeat;
+}
+ .mainPage {
+    box-sizing: border-box;   
+     display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+}
+.introduceTitle{
+	font-weight:900;
+	font-size:30px;
+	line-height: 1px;
+}
+ .subtitle {
+   color: #6B8E23;
+   font-weight:900;
+}
+ .content {
+   color : dimgrey;
+   font-size:14px;	
+   line-height: 9px;
+}
+ .content2 {
+    box-sizing: border-box;   
+     display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+}
+.courseTable{
+	 border: 3px solid darkgray;
+	 width: 900px;
+	 height: 400px;
+	 margin-left:auto;
+	 margin-right:auto;
+	 text-align: center;	 
+}
+th, td {
+    border: 1px solid darkgray;
+  }
+/*임여명*/
