@@ -33,6 +33,7 @@ dependencies {
 	
 	//카카오관련
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 	
 }
 
