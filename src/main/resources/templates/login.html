@@ -1,20 +1,28 @@
 <html layout:decorate="~{layout}">
-<div layout:fragment="content" class="container my-3">
+<div layout:fragment="content" class="logincontainer">
 
-	<div class="mt-2">
+	<div class="m-3 sociallogin">
     	<a href="/oauth2/authorization/kakao">
-    		<img th:src="@{/img/kakao_login.png}"
+    		<img th:src="@{/img/sociallogin/kakao_login.png}"
     			 class="img-responsive"
     			 alt="..."/>
     	</a>
 	</div>
 	
-	<div>
-		<a href="/oauth2/authorization/naver">네이버 아이디로 로그인</a>
+	<div class="m-3 sociallogin">
+    	<a href="/oauth2/authorization/naver">
+    		<img th:src="@{/img/sociallogin/naver_login.png}"
+    			 class="img-responsive"
+    			 alt="..."/>
+    	</a>
 	</div>
 	
-	<div>
-		<a href="/oauth2/authorization/google">구글 아이디로 로그인</a>
+	<div class="m-3 sociallogin">
+    	<a href="/oauth2/authorization/google">
+    		<img th:src="@{/img/sociallogin/google_login.png}"
+    			 class="img-responsive"
+    			 alt="..."/>
+    	</a>
 	</div>
 </div>
 </html>

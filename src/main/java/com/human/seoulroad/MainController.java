@@ -34,4 +34,9 @@ public class MainController {
 		return "other";
 	}
 	
+	@RequestMapping("/recommendcourse")
+	public String rcmcourse() {
+		return "rcmcourse";
+	}
+	
 }

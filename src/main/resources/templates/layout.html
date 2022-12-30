@@ -10,12 +10,15 @@
 
 <body>
 
-<div class="d-flex justify-content-between">
+<div style="display:flex;
+			justify-content:space-between;">
 	<div class="m-2 p-1">
 		<a style="color: black; font-size:35px;" href="/">Seoul Walk</a>
 	</div>
 	
-	<div class="m-2 p-1">
+	<div class="m-2 p-1"
+		 style="width: 184.36px;
+		 		height:125px;">
 		<div class="mainPage">
 			<h4>서울</h4>
 			<p class="icon">
@@ -25,9 +28,13 @@
 		<p class="hightemp">최고 기온: </p>
 	</div>
 	
-	<div class="m-2">
+	<div class="m-2 p-1"
+		 style="display:flex;
+		 		justify-content:end;
+		 		width: 184.36px;
+		 		height:125px;">
 		<span>
-            <a sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+            <a sec:authorize="isAnonymous()" th:href="@{/user/login}" sytle="text-size:15px:">로그인</a>
             <a sec:authorize="isAuthenticated()" href="/logout">로그아웃</a>
         </span>
 	</div>

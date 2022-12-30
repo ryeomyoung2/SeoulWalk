@@ -140,3 +140,18 @@ th, td {
     border: 1px solid darkgray;
   }
 /*임여명*/
+
+
+.logincontainer{
+	text-align: center;
+	width:100%;
+	margin-top:100px;
+}
+.img-responsive{
+	max-width: 40%;
+	height:auto;
+}
+.rcmcontainer{
+	padding:100px;
+	display:flex;
+}
