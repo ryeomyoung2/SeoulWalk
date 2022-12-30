@@ -1,30 +1,20 @@
 <html layout:decorate="~{layout}">
 <div layout:fragment="content" class="container my-3">
-    <form th:action="@{/user/login}" method="post">
-        <div th:if="${param.error}">
-            <div class="alert alert-danger">
-                사용자ID 또는 비밀번호를 확인해 주세요.
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="username" class="form-label">사용자ID</label>
-            <input type="text" name="username" id="username" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">비밀번호</label>
-            <input type="password" name="password" id="password" class="form-control">
-        </div>
-        <button style="background-color:#1ABC9C; color:white; font-size:15px;" 
-        		type="submit" class="btn">로그인</button>
-    </form>
-    	<div class="mt-2">
-	    	<a href="https://kauth.kakao.com/oauth/authorize?client_id=4345b22e9518668b68ba1e269c1b84a8&redirect_uri=https://localhost:8080/member/kakao&response_type=code">
-	    		<img th:src="@{/img/kakao_login.png}"
-	    			 class="img-responsive"
-	    			 alt="..."/>
-	    	</a>
-		</div>
-    
-    
+
+	<div class="mt-2">
+    	<a href="/oauth2/authorization/kakao">
+    		<img th:src="@{/img/kakao_login.png}"
+    			 class="img-responsive"
+    			 alt="..."/>
+    	</a>
+	</div>
+	
+	<div>
+		<a href="/oauth2/authorization/naver">네이버 아이디로 로그인</a>
+	</div>
+	
+	<div>
+		<a href="/oauth2/authorization/google">구글 아이디로 로그인</a>
+	</div>
 </div>
 </html>

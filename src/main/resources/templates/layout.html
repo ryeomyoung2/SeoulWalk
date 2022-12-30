@@ -28,7 +28,7 @@
 	<div class="m-2">
 		<span>
             <a sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
-            <a sec:authorize="isAuthenticated()" href="#">로그아웃</a>
+            <a sec:authorize="isAuthenticated()" href="/logout">로그아웃</a>
         </span>
 	</div>
 </div>
