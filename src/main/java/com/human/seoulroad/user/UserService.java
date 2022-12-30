@@ -18,8 +18,8 @@ public class UserService {
 		user.setUsername(username);
 		user.setEmail(email);
 		
-		// 암호화
-		user.setPassword(passwordEncoder.encode(password));
+        // 암호화
+        user.setPassword(passwordEncoder.encode(password));
 		this.userRepository.save(user);
 		return user;
 	}
