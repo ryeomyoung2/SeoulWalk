@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
-	
-	private final UserService userService;
+
 	
 	@GetMapping("/login")
 	public String login() {

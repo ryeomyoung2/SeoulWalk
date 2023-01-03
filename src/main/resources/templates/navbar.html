@@ -1,8 +1,12 @@
-<div th:fragment="navbarFragment" class="navbar justify-content-center" style="background-color:#1ABC9C;">
+<div th:fragment="navbarFragment" class="navbar" 
+	style="background-color:#1ABC9C;
+		   display:flex;
+		   justify-content:center;
+		   ">
 
 <div>
 
-	<ul class="nav me-auto mb-lg-0">
+	<ul class="nav" style="display:flex; align-items:center; flex-wrap:wrap;">
 
 		<li class="nav-item">
 			<a class="nav-link" th:href="@{/home/introduce}">둘레길 안내</a>
@@ -13,7 +17,7 @@
 		</li>
 		
 		<li class="nav-item">
-			<a class="nav-link" href="#">추천 코스</a>
+			<a class="nav-link" th:href="@{/recommendcourse}">추천 코스</a>
 		</li>
 
 		<li class="nav-item">
