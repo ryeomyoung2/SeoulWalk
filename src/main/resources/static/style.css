@@ -1,3 +1,16 @@
+/*폰트*/
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  font-family: "SUIT-Regular";
+}
+
+/*
 textarea{
 	width: 100%;
 	height: 8.25em;
@@ -5,25 +18,30 @@ textarea{
 	border-color:#808080;
 	border-radius: 10px;
 	resize:none;
-}
+}*/
 
-a{
-	color : grey;
-	text-decoration: none;
-}
-
+/* 네비게이션 바 */
 .nav-link{
 	color:white;
-	font-size: 25px;
+	font-size: 28px;
+}
+.nav-link:visited{
+	color:white;
 }
 .nav-link:hover{
 	color:black;
+}
+.nav-item{
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 /*임여명*/
 p{
 	font-size:15px;
 	line-height: 1px;
+	margin-left: 25px;
+	padding-top: 3px;
 }
 .lowtemp{
 	font-size:12px;
@@ -138,14 +156,35 @@ p{
 }
 th, td {
     border: 1px solid darkgray;
-  }
+}
+
 /*임여명*/
 
+/* 메인화면 */
+.maincourse{
+	color : black;
+	text-decoration : none;
+	font-size: 17px;
+}
+
+/* 로그인 영역, 추천코스 css */
+.divmp{
+	margin : 10px;
+	padding : 5px;
+}
+.hometext{
+	font-size : 35px;
+	text-decoration : none;
+	color : black;
+}
+.hometext:hover{
+	color : darkgrey;
+}
 
 .logincontainer{
 	text-align: center;
 	width:100%;
-	margin-top:100px;
+	margin-top:180px;
 }
 .img-responsive{
 	max-width: 40%;
@@ -154,4 +193,30 @@ th, td {
 .rcmcontainer{
 	padding:100px;
 	display:flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.login-out{
+	font-size : 30px;
+	text-decoration: none;
+	color : black;
+}
+
+.rcmcard{
+	width: 45%;
+	margin-bottom:100px;
+	display:flex;
+	justify-content: center;
+	flex-flow: column;
+	text-align: center;
+}
+.rcmcardimg{
+	margin:0px;
+	border-radius:15%;
+}
+.rcmdardtitle{
+	font-size: 2.7vw;
+	margin-bottom: 25px;
+	margin-right: 18px;
 }

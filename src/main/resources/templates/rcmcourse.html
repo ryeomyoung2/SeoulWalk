@@ -1,40 +1,33 @@
 <html layout:decorate="~{layout}">
-<div layout:fragment="content" class="rcmcontainer" style="border: 1px solid #bcbcbc;">
+<div layout:fragment="content" class="rcmcontainer">
 
-	<div class="card m-2" style="width:18rem;">
-		<!-- <img src="..." class="card-img-top" alt="..."> -->
-		<div class="card-body">
-			<h5 class="card-title m-2">커플코스</h5>
-			<p class="card-text m-2 mt-3">커플 코스입니다</p>
+	<div class="rcmcard">
+		<div class="divmp">
+			<p class="rcmdardtitle">커플코스</p>
 		</div>
+		<img th:src="@{/img/rcmcourse/couplecourse.jpg}" class="rcmcardimg" alt="...">
 	</div>
 	
-	<div class="card m-2" style="width:18rem;">
-		<div class="card-body">
-			<h5 class="card-title m-2">부부코스</h5>
-			<p class="card-text m-2 mt-3">부부 코스입니다</p>
+	
+	<div class="rcmcard">
+		<div class="divmp">
+			<p class="rcmdardtitle">가족코스</p>
 		</div>
+		<img th:src="@{/img/rcmcourse/famillycourse.jpg}" class="rcmcardimg" alt="...">
 	</div>
 	
-	<div class="card m-2" style="width:18rem;">
-		<div class="card-body">
-			<h5 class="card-title m-2">맛집코스</h5>
-			<p class="card-text m-2 mt-3">맛집 코스입니다</p>
+	<div class="rcmcard">
+		<div class="divmp">
+			<p class="rcmdardtitle">맛집코스</h5>
 		</div>
-	</div>
-	
-	<div class="card m-2" style="width:18rem;">
-		<div class="card-body">
-			<h5 class="card-title m-2">자연코스</h5>
-			<p class="card-text m-2 mt-3">자연 코스입니다</p>
-		</div>
+		<img th:src="@{/img/rcmcourse/eatcourse2.jpg}" class="rcmcardimg" alt="...">
 	</div>
 
-	<div class="card m-2" style="width:18rem;">
-		<div class="card-body">
-			<h5 class="card-title m-2">힐링코스</h5>
-			<p class="card-text m-2 mt-3">힐링 코스입니다</p>
+	<div class="rcmcard">
+		<div class="divmp">
+			<p class="rcmdardtitle">자연코스</h5>
 		</div>
+		<img th:src="@{/img/rcmcourse/naturecourse.jpg}" class="rcmcardimg" alt="...">
 	</div>	
 
 </div>
