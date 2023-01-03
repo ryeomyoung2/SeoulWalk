@@ -190,6 +190,11 @@ th, td {
 	max-width: 40%;
 	height:auto;
 }
+.sociallogin{
+	margin-bottom: 4vw;
+}
+
+/* 추천코스 영역 */
 .rcmcontainer{
 	padding:100px;
 	display:flex;
