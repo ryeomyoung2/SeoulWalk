@@ -10,15 +10,17 @@
 </head> 
 <body>
 <div layout:fragment="content" class="container my-5">
-<!--<div id="map" style="width:100%;height:400px;"></div> 
 
-<script> 
-var mapOptions = { 
-    center: new naver.maps.LatLng(37.3595704, 127.105399), 
-    zoom: 11 
-}; 
 
-var map = new naver.maps.Map('map', mapOptions); -->
+	<p>위경도 테스트</p>
+	
+	<table border="1">
+	<tr th:each="list : ${cs}">
+		<td th:text="${list}"></td>
+		<td th:text="${listStat.index}"></td>
+	</tr>
+	</table>
+
 
     
 <div id="map" style="width:100%;height:400px;"></div>
