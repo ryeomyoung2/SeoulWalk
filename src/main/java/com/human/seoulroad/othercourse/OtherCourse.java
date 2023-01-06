@@ -9,10 +9,12 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
+// CREATE TABLE IF NOT EXISTS SEOUL_TRAILS AS SELECT * FROM CSVREAD('classpath:서울두드림길정보.csv');
+
 @Entity
 @Getter
 @Setter
-@Table(name = "SEOUL_TRAILS ")
+@Table(name = "SEOUL_TRAILS")
 public class OtherCourse {
 	
 	@Id
@@ -37,7 +39,6 @@ public class OtherCourse {
 	@Column
 	private String courseName;
 	
-
-
+	
 }
 

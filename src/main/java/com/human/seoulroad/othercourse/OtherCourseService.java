@@ -28,19 +28,22 @@ public class OtherCourseService {
 	
 		return this.othercourseRepository.findAll();
 	}
+	
+	/* 추가된코드 */
+	// 파라미터(강북)을 받아서 othercourseRepository의 searchGangbok이라는 이름의 db검색 메서드를 호출
+	public List<OtherCourse> test(String pram){
+		return this.othercourseRepository.search01(pram);
+	}
+	public List<OtherCourse> test1(String pram){
+		return this.othercourseRepository.search02(pram);
+	}
 
-    private Specification<OtherCourse> search(String kw) {
-        return new Specification<>() {
-            private static final long serialVersionUID = 1L;
-            @Override
-            public Predicate toPredicate(Root<OtherCourse> q, CriteriaQuery<?> query, CriteriaBuilder cb) {
-                query.distinct(true);  // 중복을 제거 
-                
-                return cb.or(cb.like(q.get("courseDivision"), "%" + kw + "%"), // 제목 
-                        cb.like(q.get("courseBorough"), "%" + kw + "%"));     // 내용    
-            }
-        };
-    }
+
+
+	
+	/* 추가된코드 */
+	
 	
 	
 }
+
